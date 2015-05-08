@@ -1,0 +1,24 @@
+//
+// Forms
+//
+.field {
+  @extend .form-group;
+}
+
+input[type=text],
+textarea {
+  @extend .form-control;
+}
+
+input[type=submit] {
+  @extend .btn;
+  @extend .btn-default;
+}
+
+
+//
+// Tables
+//
+table {
+  @extend .table;
+}

@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @scratchpad.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @scratchpad.description %>
+</p>
+
+<p>
+  <strong>Active:</strong>
+  <%= @scratchpad.active %>
+</p>
+
+<p>
+  <strong>Starts at:</strong>
+  <%= @scratchpad.starts_at %>
+</p>
+
+<%= link_to 'Edit', edit_scratchpad_path(@scratchpad) %> |
+<%= link_to 'Back', scratchpads_path %>

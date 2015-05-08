@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Scratchpads</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Active</th>
+      <th>Starts at</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @scratchpads.each do |scratchpad| %>
+      <tr>
+        <td><%= scratchpad.name %></td>
+        <td><%= scratchpad.description %></td>
+        <td><%= scratchpad.active %></td>
+        <td><%= scratchpad.starts_at %></td>
+        <td><%= link_to 'Show', scratchpad %></td>
+        <td><%= link_to 'Edit', edit_scratchpad_path(scratchpad) %></td>
+        <td><%= link_to 'Destroy', scratchpad, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Scratchpad', new_scratchpad_path %>
