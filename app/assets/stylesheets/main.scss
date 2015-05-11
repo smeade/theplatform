@@ -5,6 +5,9 @@
   @extend .form-group;
 }
 
+input[type=email],
+input[type=password],
+input[type=search],
 input[type=text],
 textarea {
   @extend .form-control;
@@ -14,7 +17,6 @@ input[type=submit] {
   @extend .btn;
   @extend .btn-default;
 }
-
 
 //
 // Tables

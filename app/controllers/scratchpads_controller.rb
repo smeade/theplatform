@@ -1,4 +1,6 @@
 class ScratchpadsController < ApplicationController
+
+  before_action :authenticate_user!
   before_action :set_scratchpad, only: [:show, :edit, :update, :destroy]
 
   # GET /scratchpads
