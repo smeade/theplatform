@@ -11,3 +11,16 @@ two:
   description: MyText
   active: false
   starts_at: 2015-05-07 20:51:47
+
+# == Schema Information
+#
+# Table name: scratchpads
+#
+#  id          :integer          not null, primary key
+#  name        :string
+#  description :text
+#  active      :boolean
+#  starts_at   :datetime
+#  created_at  :datetime         not null
+#  updated_at  :datetime         not null
+#

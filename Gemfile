@@ -37,6 +37,10 @@ gem 'bootstrap-sass', '~> 3.3.4'
 # Users
 gem 'devise'
 
+group :development do
+  gem 'annotate', '~> 2.6.6'
+end
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
