@@ -32,7 +32,7 @@ class AccountsController < ApplicationController
       if @account.save
         format.html {
           sign_in(:user, @account.user)
-          redirect_to root_path, notice: 'Your account was successfully created.'
+          redirect_to new_project_path, notice: 'Your account was successfully created. Create your first project.'
         }
         format.json { render :show, status: :created, location: @account }
       else
