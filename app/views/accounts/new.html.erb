@@ -1,0 +1,45 @@
+<% if @account.errors.any? %>
+  <div class="alert alert-danger">
+    <p>We're sorry. We were unable to create your account.</p>
+    <p><%= @account.errors.full_messages.join(". ") %></p>
+  </div>
+<% end %>
+
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h2>Create Your Account</h2>
+  </div>
+  <div class="panel-body">
+    <%= form_for(@account) do |f| %>
+
+      <div class="field">
+        <%= f.label 'Organization name' %><br />
+        <%= f.text_field :name, autofocus: true %>
+      </div>
+
+      <%= f.fields_for :users do |user_form| %>
+        <div class="field">
+          <%= user_form.label 'Your email' %><br />
+          <%= user_form.email_field :email %>
+        </div>
+
+        <div class="field">
+          <%= user_form.label :password %>
+          <% if @validatable %>
+          <em>(<%= @minimum_password_length %> characters minimum)</em>
+          <% end %><br />
+          <%= user_form.password_field :password, autocomplete: "off" %>
+        </div>
+
+        <div class="field">
+          <%= user_form.label :password_confirmation %><br />
+          <%= user_form.password_field :password_confirmation, autocomplete: "off" %>
+        </div>
+      <% end %>
+
+      <div class="actions">
+        <%= f.submit "Create account" %>
+      </div>
+    <% end %>
+  </div>
+</div>
